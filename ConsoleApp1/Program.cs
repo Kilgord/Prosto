@@ -15,22 +15,23 @@ namespace ConsoleApp1
             int s=0;
             int q = 0;
             int f = 0;
+            Console.WriteLine("Поиск займет пару секунд, ждите!");
             for(a=1; a < 10000 ; a++)
             {
-                Console.WriteLine("a="+a);
+               
                 for (n = 1; n < a; n++)
                 {
                     int c = a % n;
                     if (c == 0)
                     {
                         s = s + n;
-                        Console.WriteLine(n);
+                       
 
 
                     }
                 }
 
-                Console.WriteLine("s="+s);
+                
                 for (n = 1; n < s; n++)
                 {
                     int c = s % n;
@@ -38,11 +39,11 @@ namespace ConsoleApp1
                     {
                         q = q + n;
 
-                        Console.WriteLine(n);
+                        
 
                     }
                 }
-                Console.WriteLine("q="+q);
+                
 
                 if (q == a & s != a)
                 {
@@ -53,7 +54,7 @@ namespace ConsoleApp1
                 s = 0;
                 q = 0;
             }
-            Console.WriteLine("f=" + f);
+            Console.WriteLine("Сумма всех дружественных чисел: f=" + f);
             Console.ReadKey();
 
         }
